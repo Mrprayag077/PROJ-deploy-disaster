@@ -38,13 +38,19 @@ app.use('/jsm/', express.static(path.join(__dirname, 'node_modules/three/example
 
 // async function main() {
 
-const MONGO_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tuna9.mongodb.net/${process.env.DB_NAME}tutorial?retryWrites=true&w=majority`;
+const MONGO_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tuna9.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 mongoose.connect(MONGO_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
 
+// const client = new MongoClient(url);
+// const client = new MongoClient(url);
+// const client = new MongoClient(url);
+// const client = new MongoClient(url);
+// const client = new MongoClient(url);
+// const client = new MongoClient(url);
 // const client = new MongoClient(url);
 // try{ await client.connect(); }
 // catch(e){ console.log(e); }
