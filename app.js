@@ -2,6 +2,8 @@ const http = require('http');
 const hostname = '0.0.0.0';
 
 const express = require("express");
+const dotenv = require('dotenv');
+dotenv.config();
 const mongoose = require("mongoose");
 const User = require("./users");
 const bodyParser = require("body-parser");
@@ -35,7 +37,9 @@ app.use('/build/', express.static(path.join(__dirname, 'node_modules/three/build
 app.use('/jsm/', express.static(path.join(__dirname, 'node_modules/three/examples/jsm')))
 
 // async function main() {
-mongoose.connect("mongodb+srv://prayag_SIHH:pp1234@cluster0.tuna9.mongodb.net/tutorial?retryWrites=true&w=majority",
+
+const MONGO_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tuna9.mongodb.net/${process.env.DB_NAME}tutorial?retryWrites=true&w=majority`;
+mongoose.connect(MONGO_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -262,7 +266,7 @@ app.post("/chtotable", function (req, res) {
 });
 
 
-app.listen(9001, function (req, res) {
+app.listen(process.env.PORT || 5000, function (req, res) {
     console.log("MAIN UI: http://localhost:9001/");
 });
 
