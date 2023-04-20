@@ -267,7 +267,7 @@ app.post("/chtotable", function (req, res) {
 
 
 app.listen(process.env.PORT || 5000, function (req, res) {
-    console.log("MAIN UI: http://localhost:9001/");
+    console.log("MAIN UI: http://localhost:5000/");
 });
 
 
