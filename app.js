@@ -46,12 +46,6 @@ mongoose.connect(MONGO_URL,
     });
 
 // const client = new MongoClient(url);
-// const client = new MongoClient(url);
-// const client = new MongoClient(url);
-// const client = new MongoClient(url);
-// const client = new MongoClient(url);
-// const client = new MongoClient(url);
-// const client = new MongoClient(url);
 // try{ await client.connect(); }
 // catch(e){ console.log(e); }
 // finally{ await client.close(); }
