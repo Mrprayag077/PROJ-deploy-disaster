@@ -45,6 +45,9 @@ mongoose.connect(MONGO_URL,
         useUnifiedTopology: true,
     });
 
+
+console.log("HIIIIIIIIIIIIIIIIIIIIIIIIII=");
+console.log(MONGO_URL);
 // const client = new MongoClient(url);
 // try{ await client.connect(); }
 // catch(e){ console.log(e); }
