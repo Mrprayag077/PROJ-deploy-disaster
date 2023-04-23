@@ -1,7 +1,7 @@
 {
   "name": "purpleadmin-free-admin-template-master",
   "version": "1.0.0",
-  "main": "./package.json",
+  "main": "./index.js",
   "scripts": {
     "build": "echo \"No build specified\" && exit 1",
     "test": "echo \"No test specified\" && exit 1",
